@@ -1,7 +1,7 @@
 use crate::adc;
 use crate::can;
 use crate::gpio;
-use crate::i2c;
+//use crate::i2c;
 #[cfg(esp_idf_soc_i2s_supported)]
 use crate::i2s;
 use crate::ledc;
@@ -46,9 +46,9 @@ pub struct Peripherals {
     pub uart1: uart::UART1<'static>,
     #[cfg(any(esp32, esp32s3))]
     pub uart2: uart::UART2<'static>,
-    pub i2c0: i2c::I2C0<'static>,
+    //pub i2c0: i2c::I2C0<'static>,
     #[cfg(not(any(esp32c3, esp32c2, esp32c5, esp32c6, esp32c61)))]
-    pub i2c1: i2c::I2C1<'static>,
+    //pub i2c1: i2c::I2C1<'static>,
     #[cfg(esp_idf_soc_i2s_supported)]
     pub i2s0: i2s::I2S0<'static>,
     #[cfg(all(esp_idf_soc_i2s_supported, any(esp32, esp32s3)))]
@@ -175,9 +175,9 @@ impl Peripherals {
             uart1: uart::UART1::steal(),
             #[cfg(any(esp32, esp32s3))]
             uart2: uart::UART2::steal(),
-            i2c0: i2c::I2C0::steal(),
+            //i2c0: i2c::I2C0::steal(),
             #[cfg(not(any(esp32c3, esp32c2, esp32c5, esp32c6, esp32c61)))]
-            i2c1: i2c::I2C1::steal(),
+            //i2c1: i2c::I2C1::steal(),
             #[cfg(esp_idf_soc_i2s_supported)]
             i2s0: i2s::I2S0::steal(),
             #[cfg(all(esp_idf_soc_i2s_supported, any(esp32, esp32s3)))]

@@ -30,7 +30,7 @@ pub mod can;
 pub mod cpu;
 pub mod delay;
 pub mod gpio;
-pub mod i2c;
+//pub mod i2c;
 #[cfg_attr(
     feature = "nightly",
     doc(cfg(all(esp_idf_soc_i2s_supported, esp_idf_comp_driver_enabled)))
